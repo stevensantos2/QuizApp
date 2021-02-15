@@ -107,11 +107,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Log.i(N_TAG,"Clicked Next");
-                int pre = nextQuestion.getCurrentQuestion();
+                int len = allQuestions.AllQuestions.length;
                 int index = nextQuestion.getNextQuestionIndex();
                 Question question = null;
                 scoreView.setText(String.valueOf(score.getScore()));
-                if (pre < index){
+                if (index<len){
                     try{
                         question = allQuestions.getQuestion(index);
                     } catch (Exception e) {
